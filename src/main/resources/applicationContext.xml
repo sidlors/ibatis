@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="serviceMEC" class="es.indra.hls.indrasid.business.mec.services.MECServices">
+		<property name="port" ref="port"></property>
+	</bean>
+	<bean id="port" class="es.indra.hls.indrasid.business.mec.services.FactoryPort"
+		factory-method="getPort" />
+	<bean id="servlet" class="mx.gob.sre.sepm.servlets.OperacionesDEC">
+		<property name="service" ref="serviceMEC"></property>
+	</bean>
+</beans>
