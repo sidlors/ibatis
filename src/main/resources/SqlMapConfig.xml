@@ -7,10 +7,10 @@
 	<transactionManager type="JDBC">
 		<dataSource type="SIMPLE">
 
-			<property name="JDBC.Driver" value="com.mysql.jdbc.Driver" />
-			<property name="JDBC.ConnectionURL" value="jdbc:mysql://localhost:3306/test" />
-			<property name="JDBC.Username" value="root" />
-			<property name="JDBC.Password" value="Semeolvid0" />
+			<property name="JDBC.Driver" value="org.hsqldb.jdbc.JDBCDriver" />
+			<property name="JDBC.ConnectionURL" value="jdbc:hsqldb:mem:test" />
+			<property name="JDBC.Username" value="SA" />
+			<property name="JDBC.Password" value="" />
 			<property name="Pool.MaximumActiveConnections" value="10" />
 			<property name="Pool.MaximumIdleConnections" value="5" />
 			<property name="Pool.MaximumCheckoutTime" value="150000" />
