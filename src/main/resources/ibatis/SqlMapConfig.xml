@@ -11,6 +11,7 @@
 			<property name="JDBC.ConnectionURL" value="jdbc:hsqldb:mem:test" />
 			<property name="JDBC.Username" value="SA" />
 			<property name="JDBC.Password" value="" />
+			<property name="JDBC.AutoCommit" value="true"/>
 			<property name="Pool.MaximumActiveConnections" value="10" />
 			<property name="Pool.MaximumIdleConnections" value="5" />
 			<property name="Pool.MaximumCheckoutTime" value="150000" />
@@ -20,5 +21,6 @@
 		</dataSource>
 	</transactionManager>
 
-	<sqlMap resource="Employee.xml" />
+	<sqlMap resource="ibatis/Employee.xml" />
+	<sqlMap resource="ibatis/Product.xml" />
 </sqlMapConfig>
